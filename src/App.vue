@@ -2,16 +2,39 @@
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
     <base-typo msg="Welcome to Your Vue.js App" />
+    <span v-if="isLoading"> loading... </span>
+    <tab-component v-else :content-tab="backValue" />
   </div>
 </template>
 
 <script>
 import BaseTypo from "./components/BaseTypo.vue";
+import TabComponent from "./components/TabComponent.vue";
 
 export default {
   name: "App",
   components: {
     BaseTypo,
+    TabComponent,
+  },
+  data() {
+    return {
+      isLoading: true,
+      backValue: [],
+    };
+  },
+
+  methods: {
+    async changeValue() {
+      await setTimeout(() => {
+        this.backValue = [{ id: 1, value: "kaiza" }];
+        this.isLoading = false;
+      }, 300);
+    },
+  },
+
+  created() {
+    this.changeValue();
   },
 };
 </script>
