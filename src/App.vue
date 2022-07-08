@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <base-typo msg="Welcome to my App" />
+    <base-typo title="Welcome to my App" />
     <span v-if="isLoading"> loading... </span>
     <tab-component v-else :content-tab="backValue" />
   </div>
@@ -26,7 +26,7 @@ export default {
   methods: {
     async changeValue() {
       await setTimeout(() => {
-        this.backValue = [{ id: 1, value: "kaiza" }];
+        this.backValue = [{ id: 1, value: "firstvalue" }];
         this.isLoading = false;
       }, 300);
     },
