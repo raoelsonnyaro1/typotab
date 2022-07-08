@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <base-typo msg="Welcome to Your Vue.js App" />
+    <base-typo msg="Welcome to my App" />
     <span v-if="isLoading"> loading... </span>
     <tab-component v-else :content-tab="backValue" />
   </div>
