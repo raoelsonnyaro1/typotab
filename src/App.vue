@@ -2,7 +2,7 @@
   <div id="app">
     <base-typo title="Welcome to my App" />
     <span v-if="isLoading"> loading... </span>
-    <tab-component v-else :content-tab="backValue" />
+    <tab-component v-else :title="titleTableau" :content-tab="backValue" />
   </div>
 </template>
 
@@ -19,6 +19,7 @@ export default {
   data() {
     return {
       isLoading: true,
+      titleTableau: "Tableau",
       backValue: [],
     };
   },
