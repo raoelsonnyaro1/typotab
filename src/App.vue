@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <base-typo title="Welcome to my App" />
+    <base-typo :bigTitle="bigTitle" />
     <span v-if="isLoading"> loading... </span>
     <tab-component v-else :title="titleTableau" :content-tab="backValue" />
   </div>
@@ -21,6 +21,7 @@ export default {
       isLoading: true,
       titleTableau: "Tableau",
       backValue: [],
+      bigTitle: "titre",
     };
   },
 

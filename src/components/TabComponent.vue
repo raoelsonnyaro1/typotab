@@ -26,10 +26,6 @@ export default {
       type: Array,
       default: () => [],
     },
-    btnText: {
-      type: String,
-      default: "add",
-    },
 
     inputText: {
       type: String,
@@ -39,14 +35,12 @@ export default {
       type: String,
       default: "",
     },
-    btnSupprimer: {
-      type: String,
-      default: "delete",
-    },
   },
 
   data() {
     return {
+      btnText: "add",
+      btnSupprimer: "delete",
       newItem: "",
     };
   },

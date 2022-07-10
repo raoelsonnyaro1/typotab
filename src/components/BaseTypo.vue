@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ title }}</h1>
+    <h1 @mouseover="isRed = !isRed" :class="{ red: isRed }">{{ bigTitle }}</h1>
   </div>
 </template>
 
@@ -8,15 +8,20 @@
 export default {
   name: "BaseTypo",
   props: {
-    title: String,
+    bigTitle: String,
+  },
+
+  data() {
+    return {
+      isRed: false,
+    };
   },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
-.red{
+.red {
   color: red;
 }
 h3 {
