@@ -1,6 +1,7 @@
 <template>
   <div class="hello">
     <h1 @mouseover="isRed = !isRed" :class="{ red: isRed }">{{ bigTitle }}</h1>
+    <h2 v-if="isRed">{{ subTitle }}</h2>
   </div>
 </template>
 
@@ -8,7 +9,14 @@
 export default {
   name: "BaseTypo",
   props: {
-    bigTitle: String,
+    bigTitle: {
+      type: String,
+      default: "",
+    },
+    subTitle: {
+      type: String,
+      default: "",
+    },
   },
 
   data() {

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <base-typo :bigTitle="bigTitle" />
+    <base-typo :bigTitle="bigTitle" :sub-title="subTitle" />
     <span v-if="isLoading"> loading... </span>
     <tab-component v-else :title="titleTableau" :content-tab="backValue" />
   </div>
@@ -22,6 +22,7 @@ export default {
       titleTableau: "Tableau",
       backValue: [],
       bigTitle: "titre",
+      subTitle: "sous-titre",
     };
   },
 
